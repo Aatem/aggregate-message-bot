@@ -65,7 +65,8 @@ def main():
     app.run_webhook(
         listen="0.0.0.0",
         port=PORT,
-        webhook_url=url
+        webhook_url=url,
+        webhook_path=WEBHOOK_PATH
         )
 
 if __name__ == "__main__":
