@@ -60,7 +60,8 @@ def main():
     app.add_handler(MessageHandler(filters.FORWARDED & (filters.TEXT | filters.CAPTION), handle_forward))
 
     #app.run_polling()
-    url = f"https://{APP_NAME}.onrender.com/{TOKEN}"
+    WEBHOOK_PATH = "/webhook"
+    url = f"https://{APP_NAME}.onrender.com/{WEBHOOK_PATH}"
     app.run_webhook(
         listen="0.0.0.0",
         port=PORT,
